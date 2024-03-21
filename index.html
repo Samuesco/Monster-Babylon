@@ -97,7 +97,17 @@
 
 
     const cobble = new BABYLON.StandardMaterial("cobble",scene);
-    cobble.bumpTexture = new BABYLON.Texture("ASTEROID_LOW_POLY_4_COLOR_.png")
+    cobble.bumpTexture = new BABYLON.Texture("https://samuesco.github.io/Monster-Babylon/MALLASWEB/NormalMap.png")
+
+    BABYLON.SceneLoader.ImportMeshAsync("", "https://samuesco.github.io/Monster-Babylon/MALLASWEB/", "asteroid.glb").then ((result)=> {
+        result.meshes[1].position.x = 1;
+        result.meshes[1].position.y = 0;
+        result.meshes[1].position.y = 1;
+        result.meshes[1].material = cobble;
+        result.meshes[1].scaling = new BABYLON.Vector3(1,1,1);
+
+    });
+    return scene;cobble.bumpTexture = new BABYLON.Texture("ASTEROID_LOW_POLY_4_COLOR_.png")
 
     BABYLON.SceneLoader.ImportMeshAsync("", "https://samuesco.github.io/Monster-Babylon/MALLASWEB/", "asteroid.glb").then ((result)=> {
         result.meshes[1].position.x = 1;
