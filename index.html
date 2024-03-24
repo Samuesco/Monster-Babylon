@@ -107,7 +107,7 @@
         result.meshes[1].scaling = new BABYLON.Vector3(1,1,1);
 
     });
-    return scene;cobble.bumpTexture = new BABYLON.Texture("ASTEROID_LOW_POLY_4_COLOR_.png")
+    cobble.bumpTexture = new BABYLON.Texture("ASTEROID_LOW_POLY_4_COLOR_.png")
 
     BABYLON.SceneLoader.ImportMeshAsync("", "https://samuesco.github.io/Monster-Babylon/MALLASWEB/", "asteroid.glb").then ((result)=> {
         result.meshes[1].position.x = 1;
