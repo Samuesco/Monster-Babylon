@@ -61,12 +61,11 @@
         var scene = null;
         var sceneToRender = null;
         var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true,  disableWebGL2Support: false}); };
-        var createScene = function () {
+    var createScene = function () {
     // This creates a basic Babylon Scene object (non-mesh)
     var scene = new BABYLON.Scene(engine);
 
-    // This creates and positions a free camera (non-mesh)
-     var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 6, -30), scene);
+    var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 6, -30), scene);
 
     // This targets the camera to scene origin
     camera.setTarget(BABYLON.Vector3.Zero());
@@ -106,7 +105,6 @@
         result.meshes[1].position.z = 0;
         result.meshes[1].scaling = new BABYLON.Vector3(1,1,1);
     });
-
     return scene;
 };
                 window.initFunction = async function() {
